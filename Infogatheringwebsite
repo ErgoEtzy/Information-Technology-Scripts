@@ -1,0 +1,34 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="index.css"/>
+		<title>Innlevering</title>
+	</head>
+	<body>
+          <div id="oppgaver">
+     		<h2>Welcome! You have entered a basic info gathering website. </h2>
+               <h4 id="bodytext"> You did not consent. Please leave this website. </h4>
+          </div>
+               <script>
+               var consent = prompt("You are entering a basic info gathering website. Proceed with 'y'");
+               var txt = "";
+               txt += "Browser CodeName: " + navigator.appCodeName + "<br>";
+               txt += "Browser Name: " + navigator.appName + "<br>";
+               txt += "Browser Version: " + navigator.appVersion + "<br>";
+               txt += "Cookies Enabled: " + navigator.cookieEnabled + "<br>";
+               txt += "Browser Language: " + navigator.language + "<br>";
+               txt += "Browser Online: " + navigator.onLine + "<br>";
+               txt += "Platform: " + navigator.platform + "<br>";
+               txt += "User-agent header: " + navigator.userAgent + "<br>";
+
+
+               if (["y", "yes"].includes(consent.toLowerCase()))
+               //if (consent === "y" || consent === "Y" || consent === "Yes" ||  consent === "yes")
+               {
+                    document.getElementById("bodytext").innerHTML = txt;   
+               }
+     
+          </script>
+	</body>
+</html>
